@@ -1,7 +1,7 @@
 # Project workflow: choose the route, prove the result
 Built in Instinct, for Instinct only. Not for Gemini, Claude, GPT or Codex harnesses.
 
-Version 1.1 | Canonical file: WORKFLOW.md | Living document
+Version 1.2 | Canonical file: WORKFLOW.md | Living document
 
 **Read this file first**: at the start of every task, and again before every update, handoff, or release. Section 4 is the central gate for all work: nothing is ready until the gate passes for the exact candidate. Use it under the project owner's adoption and instructions; it does not authorize itself or expand a task's scope. Keep one canonical copy; link to it from projects.
 
@@ -32,7 +32,7 @@ Classify use accurately: **Read** / **Applied** (steps changed the work, evidenc
 
 ## 2. Routes
 
-Combine routes when needed; every route ends at the same gate. Unlisted work (research, documents, data): use Start here plus the gate with tests suited to the output; do not force an unrelated skill route.
+Combine routes when needed; every route ends at the same gate. Unlisted work (research, documents, data): use Start here plus the gate with tests suited to the output; do not force an unrelated skill route. Collecting references or samples (research data, quotes, example posts): before saving, strip platform boilerplate and bylines, anonymize private-person handles, deduplicate, and keep one source link per item or mark the link missing. Cleaning prepares material for use; it does not verify the claims in it.
 
 ### A. Coding: feature, behavior change, refactor
 
@@ -44,6 +44,7 @@ Test-first change, then verification before completion; systematic root-cause de
 4. Run the relevant tests AND the full suite, build, and required checks. An unavailable command is BLOCKED, not a pass.
 5. Inspect the diff for unrelated changes. Test the original journey, error states, regressions. UI changes also use route B.
 6. Verify the exact committed candidate before merge or release. After authorized deployment, inspect the live version; an upload or local build is not deployment proof.
+7. Failed deployment or pipeline run: read the failure logs before changing anything. Distinguish an infrastructure failure (timeout, publishing or environment error after a passing build and tests) from a code or build failure. On an infrastructure failure with a green build, the smallest recovery is one bounded retry of the failed job with the same tested artifact; do not rebuild, re-merge, or change code without evidence of a code fault. If the bounded retry fails, stop and report instead of looping. Never claim fixed until the live version is inspected.
 
 ### B. Product UI, dashboard, map, landing page, redesign
 
@@ -144,4 +145,4 @@ This template names no upstream sources. Record the sources actually used per pr
 
 - Template edition: five routes, run card, gate, source map. Log one line per change here.
 - 2026-11-05: Routes genericized to the owner's arsenal; named third-party picks removed. Source map now records per-project sources instead.
-
+- 2026-11-09 v1.2: Route A gained failed-deployment diagnosis (logs first, infrastructure versus code, one bounded retry with the same tested artifact, live verification before any fixed claim). Research work gained reference-collection hygiene (strip boilerplate and bylines, anonymize private-person handles, deduplicate, keep or mark source links). No route, gate, check, or source removed.
