@@ -3,7 +3,7 @@ Built in Instinct, for Instinct only. Not for Gemini, Claude, GPT or Codex harne
 
 Steering for the owner's Instinct. Work method and rules only, no personal data. The agent proposes changes; the owner approves. Updated in place, never duplicated.
 
-Fill in each section. Delete a question once answered. A line left as-is is the default.
+Prompts are optional and answered through use, not an install questionnaire. Propose one work rule when relevant; save only on the owner's yes. An unanswered question is not a preference. Delete a question once answered. Explicit default lines apply until the owner changes them.
 
 ## Accounts and storage
 - Where does steering live? (default: this private repo only, never work accounts)
@@ -17,6 +17,7 @@ Fill in each section. Delete a question once answered. A line left as-is is the 
 - Default: never claim "checked" without checking.
 
 ## Chat replies
+- Preferred reply language and locale conventions (dates, numbers and units)? Do not infer a permanent rule from one message.
 - Max length?
 - One question at a time, or batched decisions?
 
@@ -45,6 +46,7 @@ These rules apply when the agent writes skill files for you (reusable task guide
 
 ## Working style
 - Default: stay inside the brief; no scope expansion. Research before saying unknown.
+- Availability, time zone and notification windows, if needed for the work? Store only the approved work rule, not private reasons or calendar details. This does not create reminders, monitoring or calendar changes.
 - Domain-specific rules? (decks, ads, code, social: add your own sections here)
 
 ## Skills and repos
@@ -59,4 +61,3 @@ These rules apply when the agent writes skill files for you (reusable task guide
 - Maintaining this repo means writing only inside this repo. Normal project work in other repos is unaffected.
 - NEVER push to a public repo without checking the diff for personal content first. Public edits stay generic and reusable by anyone.
 - Add your own NEVER lines here.
-

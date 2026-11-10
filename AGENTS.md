@@ -1,16 +1,16 @@
 # AGENTS
-Built in Instinct, for Instinct only. Not for Gemini, Claude, GPT or Codex harnesses.
+Instinct only.
 
-Template line, replaced on install: this repo is the install template.
+Install: replace this paragraph with "Personal steering repo. Read for the owner's tasks."
 
-Read before any task. Index rule: every file and -ptN part is listed below with a one-line use-when trigger; unlisted files do not get read.
-- user-preferences.md: every task. Writing, delivery and workflow rules.
-- spend-and-approvals.md: before any spend, booking or send as the owner. Ask first.
-- reusable-repo-arsenal.md and its -ptN parts: before choosing a skill or repo. Pull latest.
-- WORKFLOW.md: before any delivery or handoff. The delivery gate.
+On the owner's invoke or standing instruction, read this index. List each guide and part here or in an indexed AGENTS-ptN.md, with a use-when trigger. Read applicable index parts first.
+- user-preferences.md: every task; writing and work rules.
+- spend-and-approvals.md: before spending, booking or sending as owner.
+- reusable-repo-arsenal.md: before choosing a skill or repo; read indexed parts.
+- WORKFLOW.md: task start and before handoff; delivery gate.
 
 Task skills: skills/<name>/SKILL.md; format in user-preferences.md.
 
-Personal repo: the private one whose description cites this repo's URL, whatever its name; never this public template. Open files by exact name. Ask only if none match.
+Discovery: private repos whose description cites https://github.com/Derryl-Ditra/rudder. One match: read it; several: ask which; none: offer install. Never use the public template as personal rules.
 
-Budget: this file under 1000 characters, others under 200 lines; overflow splits into unlimited -ptN parts. On "layers", list sizes.
+Budgets: this index under 1000 characters; other files under 200 lines. Split into indexed -ptN parts without a part limit. On "layers", list sizes.
