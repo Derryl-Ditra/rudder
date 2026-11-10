@@ -1,7 +1,7 @@
 # Project workflow: choose the route, prove the result
 Built in Instinct, for Instinct only. Not for Gemini, Claude, GPT or Codex harnesses.
 
-Version 1.3 | Canonical file: WORKFLOW.md | Living document
+Version 1.4 | Canonical file: WORKFLOW.md | Living document
 
 **Read this file first**: at the start of every task, and again before every update, handoff, or release. Section 4 is the central gate for all work: nothing is ready until the gate passes for the exact candidate. Use it under the project owner's adoption and instructions; it does not authorize itself or expand a task's scope. Keep one canonical copy; link to it from projects.
 
@@ -159,6 +159,5 @@ This template names no upstream sources. Record the sources actually used per pr
 - Template edition: five routes, run card, gate, source map. Log one line per change here.
 - 2026-11-05: Routes genericized to the owner's arsenal; named third-party picks removed. Source map now records per-project sources instead.
 - 2026-11-09 v1.2: Route A gained failed-deployment diagnosis (logs first, infrastructure versus code, one bounded retry with the same tested artifact, live verification before any fixed claim). Research work gained reference-collection hygiene (strip boilerplate and bylines, anonymize private-person handles, deduplicate, keep or mark source links). No route, gate, check, or source removed.
-
 - 2026-11-10 v1.3: check the check before changing the candidate; validate a changed rule or check on a real case. Generic method only; no user-specific results claimed.
 - 2026-11-10 v1.4: optional route F for standalone graphic, poster and print assets.
