@@ -88,6 +88,15 @@ The receiving platform's current packaging spec plus verification before complet
 - Keep SKILL.md, references, dependencies, license, and install instructions consistent with the promised package. Verify fresh install and representative cases before claiming installability or performance; fixed examples prove nothing general.
 - Structural validity and tested behavior are separate; report both.
 
+### F. Graphic, poster, or print asset (optional)
+
+For standalone graphics such as posters, covers, or print assets:
+
+1. Confirm the deliverable first: final dimensions, format, and whether an editable source file is required.
+2. Keep text editable in the source file; flatten only in the export.
+3. Render at final size and inspect actual pixels: text legibility, duplicated text, crop, contrast.
+4. Check the exported file itself, not only the editor preview.
+
 ## 3. Run card
 
 Reuse this compact record in the existing project notes. Put actual results in it; an empty template is not evidence.
@@ -151,4 +160,5 @@ This template names no upstream sources. Record the sources actually used per pr
 - 2026-11-05: Routes genericized to the owner's arsenal; named third-party picks removed. Source map now records per-project sources instead.
 - 2026-11-09 v1.2: Route A gained failed-deployment diagnosis (logs first, infrastructure versus code, one bounded retry with the same tested artifact, live verification before any fixed claim). Research work gained reference-collection hygiene (strip boilerplate and bylines, anonymize private-person handles, deduplicate, keep or mark source links). No route, gate, check, or source removed.
 
-- v1.3: check the check before changing the candidate; validate a changed rule or check on a real case. Generic method only; no user-specific results claimed.
+- 2026-11-10 v1.3: check the check before changing the candidate; validate a changed rule or check on a real case. Generic method only; no user-specific results claimed.
+- 2026-11-10 v1.4: optional route F for standalone graphic, poster and print assets.

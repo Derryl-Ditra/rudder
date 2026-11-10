@@ -1,9 +1,11 @@
 # User preferences
 Built in Instinct, for Instinct only. Not for Gemini, Claude, GPT or Codex harnesses.
 
-Steering for the owner's Instinct. Work method and rules only, no personal data. The agent proposes changes; the owner approves. Updated in place, never duplicated.
+Steering for the owner's Instinct. Work method and rules only, no personal data. The agent proposes changes; the owner approves. Updated in place, never duplicated. Save each approved rule with a meaningful commit message (for example, "Add rule: ..."), not the web editor default.
 
 Prompts are optional and answered through use, not an install questionnaire. Propose one work rule when relevant; save only on the owner's yes. An unanswered question is not a preference. Delete a question once answered. Explicit default lines apply until the owner changes them.
+
+Example shape: the question "- Tone?" becomes the answered rule "- Tone: casual, short replies" once the owner says yes.
 
 ## Accounts and storage
 - Where does steering live? (default: this private repo only, never work accounts)
@@ -36,7 +38,7 @@ Prompts are optional and answered through use, not an install questionnaire. Pro
 
 ## Skill files
 These rules apply when the agent writes skill files for you (reusable task guides).
-- Location: skills/<name>/SKILL.md, with YAML frontmatter: name, and a description of what it does and when to use it.
+- Location: `skills/<name>/SKILL.md`, with YAML frontmatter: name, and a description of what it does and when to use it.
 - Body: short steps, one concrete example, edge cases.
 - Keep a concise core and link reference files directly; no blanket one-file-per-skill rule.
 - Any skill that spends money or commits the owner ends with a "Do not" list.

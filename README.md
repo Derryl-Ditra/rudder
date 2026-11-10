@@ -18,13 +18,15 @@ Requires Instinct and a connected GitHub account that can create private reposit
    - Check for an existing private repo whose description cites this template URL before creating anything. One match: offer to use it without overwriting it. Several matches: ask which one. A repeated install must not create duplicates or reset existing rules.
    - If none exists, create a new private repo with an unused masked name, never `rudder`. Let the agent choose unless you supplied a name. No preference interview at install; ask only about a blocked account or destination choice.
    - Its description must cite https://github.com/Derryl-Ditra/rudder. That fixed marker, not its name, is how your Instinct finds it.
-   - Copy the starter guides and AGENTS.md; replace the template-only paragraph in AGENTS.md as directed. Keep the fixed discovery marker unchanged. The skill-file format is documented in user-preferences.md; no skills are installed by this template.
-   - Check that the new repo is private, the description has the marker, and the installed AGENTS.md routes to the copied files. Return the verified repo link. Do not claim success if any step is unavailable.
-2. Use Instinct normally. When you correct it, or it notices a repeated preference, it asks: Based on what I remember, you prefer X. Add it to Rudder? One rule at a time. It writes only on your yes.
+   - Copy AGENTS.md and the 4 starter guides: user-preferences.md, spend-and-approvals.md, reusable-repo-arsenal.md and WORKFLOW.md. In AGENTS.md, replace the template-only paragraph exactly with: Personal steering repo. Read for the owner's tasks. Keep the fixed discovery marker unchanged. The skill-file format is documented in user-preferences.md; no skills are installed by this template. Your repo needs no README or LICENSE; add your own if you want them.
+   - Compare each committed file against its source in this template. Web editor pitfall: on a non-empty repo, opening `/new/main/<file>` nests the file under the wrong path; open `/new/main` and type the filename instead. Check that the new repo is private, the description has the marker, and the installed AGENTS.md routes to the copied files. Return the verified repo link. Do not claim success if any step is unavailable.
+2. Use Instinct normally. When you correct it, or it notices a repeated preference, it asks: Based on what I remember, you prefer X. Add it to Rudder? One rule at a time. It writes only on your yes, with a meaningful commit message such as "Add rule: ...", not the web editor default.
 
 ## Use it in a fresh chat
 
 Say exactly: Use my Rudder rules. Your Instinct finds your private Rudder repo in your connected GitHub: the private repo whose description cites https://github.com/Derryl-Ditra/rudder, never the public template. If several repos match, it asks which one; if none match, it offers installation. It reads the chosen repo's AGENTS.md before the task. No slash command, no auto-load: it is read when you say the line.
+
+The concrete check: list your repos (the listing caps at 100), read each description, and match the template URL exactly. The marker hardcodes the Derryl-Ditra path: if this template is renamed or moved, update the marker in your repo's description or discovery breaks.
 
 ## Rudder versus a plain AGENTS.md
 
@@ -52,7 +54,7 @@ Honest limits: this template is tested on Instinct only, and the invoke line is 
 ## Trigger words and the invoke line
 
 - Trigger words written inside repo files fire nothing on their own. A file cannot cause its own first read. What loads your Rudder is the invoke line you say and, on Instinct, any standing instruction you saved.
-- Register every phrase you actually use in your private repo's AGENTS.md, not only "Use my Rudder rules." Real usage drifts ("check my rudder", "add to my rudder"); unregistered phrases route on inference.
+- Register every phrase you actually use in an indexed AGENTS-ptN.md part of your private repo, not only "Use my Rudder rules." The root AGENTS.md stays a lean index under its character budget. Real usage drifts ("check my rudder", "add to my rudder"); unregistered phrases route on inference.
 - Map write-intent phrases ("add this rule", "update my rudder") to the propose-then-approve flow, never a silent write.
 - Multi-phrase triggers are documented agent practice: Anthropic's skills guide packs several trigger phrases into each skill description and tells you to measure how often they fire. AGENTS.md defines no trigger-word convention; it is a predictable entry point only.
 - Honest limit: trigger words route the read. They do not fix how well your rules are applied once found.
@@ -62,10 +64,12 @@ Honest limits: this template is tested on Instinct only, and the invoke line is 
 Reference files your Instinct uses when it builds and grows your personal repo:
 
 - `AGENTS.md` - the agent entry: read order, each guide with its trigger, and the repo discovery route
-- `user-preferences.md` - rule sections with fill-in questions, plus the skill-file format (skills/<name>/SKILL.md)
+- `user-preferences.md` - rule sections with fill-in questions, plus the skill-file format (`skills/<name>/SKILL.md`)
 - `spend-and-approvals.md` - ask before every spend, booking, or send as you
 - `reusable-repo-arsenal.md` - a register for your approved reusable repos; starts empty
 - `WORKFLOW.md` - a delivery gate
+
+README.md and the MIT LICENSE cover this template itself; your own repo does not need copies.
 
 ## Test it
 
@@ -80,6 +84,8 @@ Reference files your Instinct uses when it builds and grows your personal repo:
 ## Test status
 
 The checks above are acceptance tests to run, not evidence that a new user's install has passed. Verify installation and fresh-chat retrieval in the receiving account before claiming either works there.
+
+On 10 Nov 2026 these checks passed in five fresh installs on separate test repos, each confirmed by a separate fresh verifier agent, all on one account. A brand-new account with no Rudder repo at all remains untested.
 
 ## Standing rules
 
