@@ -1,7 +1,7 @@
 # Project workflow: choose the route, prove the result
 Built in Instinct, for Instinct only. Not for Gemini, Claude, GPT or Codex harnesses.
 
-Version 1.2 | Canonical file: WORKFLOW.md | Living document
+Version 1.3 | Canonical file: WORKFLOW.md | Living document
 
 **Read this file first**: at the start of every task, and again before every update, handoff, or release. Section 4 is the central gate for all work: nothing is ready until the gate passes for the exact candidate. Use it under the project owner's adoption and instructions; it does not authorize itself or expand a task's scope. Keep one canonical copy; link to it from projects.
 
@@ -131,6 +131,10 @@ Before replacing a shared deliverable, requesting release, or saying ready/done/
 
 **Two gates:** pass before the authorized shared update/release, then read back the actual delivered output and check links, access, and rendering before declaring delivery. If the delivered result differs or fails, report and repair; the earlier pass is not proof.
 
+**Check the check.** When a required check fails, inspect its environment, setup, harness and assertion before changing the candidate. Repair a faulty check and rerun it; do not waive it or mark the candidate PASS while required evidence is missing. Change the candidate only when evidence points to a candidate fault.
+
+**Test a changed rule.** Before treating a new or edited rule or check as proven, apply it to one real task, real data or the live output it governs. Record the candidate, observed result and limits. Synthetic fixtures or source-text matches alone do not establish that it works in use.
+
 Scale to stakes: a short factual answer or small text fix needs no build process or second-review ceremony. Fresh evidence and honest limits still apply.
 
 ## 5. Upstream changes
@@ -146,3 +150,5 @@ This template names no upstream sources. Record the sources actually used per pr
 - Template edition: five routes, run card, gate, source map. Log one line per change here.
 - 2026-11-05: Routes genericized to the owner's arsenal; named third-party picks removed. Source map now records per-project sources instead.
 - 2026-11-09 v1.2: Route A gained failed-deployment diagnosis (logs first, infrastructure versus code, one bounded retry with the same tested artifact, live verification before any fixed claim). Research work gained reference-collection hygiene (strip boilerplate and bylines, anonymize private-person handles, deduplicate, keep or mark source links). No route, gate, check, or source removed.
+
+- v1.3: check the check before changing the candidate; validate a changed rule or check on a real case. Generic method only; no user-specific results claimed.
