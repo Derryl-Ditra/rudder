@@ -1,10 +1,10 @@
 # Rudder
 
-Stop your Instinct repeating mistakes.
+Want an Instinct that works your way in every chat? Tired of repeating the same corrections?
 
-This repo is the installation template only. It holds no personal rules. Your Instinct agent builds your personal Rudder repo privately: a new private repo that starts as a blank slate and grows by use, from your usage and context alone.
+Build a Rudder: one private repo of your rules. Starts blank, grows by use, each rule added only on your yes.
 
-For knowledge workers and software engineers: anyone whose agent does better work when it knows how they work.
+This repo is the install template only. It holds no personal rules.
 
 Tested on Instinct. Built in Instinct, for Instinct: the repo, the install flow and the tests were all made and run inside an Instinct agent.
 
