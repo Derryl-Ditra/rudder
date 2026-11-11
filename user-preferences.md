@@ -11,6 +11,7 @@ Example shape: the question "- Tone?" becomes the answered rule "- Tone: casual,
 - Where does steering live? (default: this private repo only, never work accounts)
 - Which paid APIs or services may the agent use, if any? (default: none)
 - Files are updated in place at stable names.
+- When a file nears its size budget, split into indexed parts by default; nothing is trimmed or moved silently. If parts pile up or rules overlap, the agent may propose one consolidated rewrite that merges overlaps and demotes one-off preferences; the rewrite applies only on the owner's yes. Not every small preference becomes a permanent rule.
 
 ## Writing rules
 - Banned punctuation or phrases?
