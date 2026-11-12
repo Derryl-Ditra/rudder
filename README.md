@@ -18,7 +18,7 @@ Requires Instinct and a connected GitHub account that can create private reposit
    - Check for an existing private repo whose description cites this template URL before creating anything. One match: offer to use it without overwriting it. Several matches: ask which one. A repeated install must not create duplicates or reset existing rules.
    - If none exists, create a new private repo with an unused masked name, never `rudder`. Let the agent choose unless you supplied a name. No preference interview at install; ask only about a blocked account or destination choice.
    - Its description must cite https://github.com/Derryl-Ditra/rudder. That fixed marker, not its name, is how your Instinct finds it.
-   - Copy AGENTS.md and the 4 starter guides: user-preferences.md, spend-and-approvals.md, reusable-repo-arsenal.md and WORKFLOW.md. In AGENTS.md, replace the template-only paragraph exactly with: Personal steering repo. Read for the owner's tasks. Keep the fixed discovery marker unchanged. The skill-file format is documented in user-preferences.md; no skills are installed by this template. Your repo needs no README or LICENSE; add your own if you want them.
+   - Copy AGENTS.md and the 5 starter guides: user-preferences.md, spend-and-approvals.md, reusable-repo-arsenal.md, WORKFLOW.md and removals-log.md. In AGENTS.md, replace the template-only paragraph exactly with: Personal steering repo. Read for the owner's tasks. Keep the fixed discovery marker unchanged. The skill-file format is documented in user-preferences.md; no skills are installed by this template. Your repo needs no README or LICENSE; add your own if you want them.
    - Compare each committed file against its source in this template. Web editor pitfall: on a non-empty repo, opening `/new/main/<file>` nests the file under the wrong path; open `/new/main` and type the filename instead. Check that the new repo is private, the description has the marker, and the installed AGENTS.md routes to the copied files. Return the verified repo link. Do not claim success if any step is unavailable.
 2. Use Instinct normally. When you correct it, or it notices a repeated preference, it asks: Based on what I remember, you prefer X. Add it to Rudder? One rule at a time. It writes only on your yes, with a meaningful commit message such as "Add rule: ...", not the web editor default.
 
@@ -51,6 +51,16 @@ If you want conventions for one shared repo, write an AGENTS.md. If you want you
 
 Honest limits: this template is tested on Instinct only, and the invoke line is a habit, not a hook. Without the line or an applicable standing instruction, do not assume the rules were read. These instructions are not an automatic loader or a guarantee against mistakes.
 
+## As it grows: parts, hubs and compression
+
+A Rudder repo starts as a few files and grows by use. Three mechanisms keep it readable:
+
+- Parts: any file that nears 200 lines splits into indexed -pt2, -pt3 ... -ptN parts with no upper limit. Nothing is trimmed to make room.
+- Topic hubs: when one topic outgrows the root index, group its files behind an index-<topic>.md hub. AGENTS.md lists the hub with a one-line use-when trigger; the hub names the exact files to open. Your agent opens the hub, then only the files the task needs.
+- Compression with the reason kept: when parts pile up or rules overlap, your agent may propose one consolidated rewrite, but every constraint and the reason behind it must survive, verbatim or merged with both reasons kept. Each removed or merged line gets a dated entry in removals-log.md naming the surviving line that carries it. The rewrite applies only on your yes.
+
+Size checks run on two triggers: monthly (list sizes on "layers") and whenever a file nears its budget. A check ends in a report or one proposal, never a silent write.
+
 ## Trigger words and the invoke line
 
 - Trigger words written inside repo files fire nothing on their own. A file cannot cause its own first read. What loads your Rudder is the invoke line you say and, on Instinct, any standing instruction you saved.
@@ -68,6 +78,7 @@ Reference files your Instinct uses when it builds and grows your personal repo:
 - `spend-and-approvals.md` - ask before every spend, booking, or send as you
 - `reusable-repo-arsenal.md` - a register for your approved reusable repos; starts empty
 - `WORKFLOW.md` - a delivery gate
+- `removals-log.md` - an append-only log that proves compressed rules kept every constraint and reason
 
 README.md and the MIT LICENSE cover this template itself; your own repo does not need copies.
 
