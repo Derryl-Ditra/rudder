@@ -12,6 +12,8 @@ Example shape: the question "- Tone?" becomes the answered rule "- Tone: casual,
 - Which paid APIs or services may the agent use, if any? (default: none)
 - Files are updated in place at stable names.
 - When a file nears its size budget, split into indexed parts by default; nothing is trimmed or moved silently. If parts pile up or rules overlap, the agent may propose one consolidated rewrite that merges overlaps and demotes one-off preferences; the rewrite applies only on the owner's yes. Not every small preference becomes a permanent rule.
+- Compression keeps the reason: when a rule or doc is compressed, every constraint and the reason behind it survives, verbatim or merged with both reasons kept. The agent never quietly renegotiates a rule's scope, threshold, or condition. Every removed or merged line gets a dated justification entry in removals-log.md naming the surviving line that carries it.
+- Size-check cadence: two triggers, monthly and size. Monthly: list sizes even without a request. Size-triggered: when a file nears its budget, parts pile up, rules overlap, or the index nears its character limit. A check ends in a size report or one consolidation proposal; nothing is written without the owner's yes.
 
 ## Writing rules
 - Banned punctuation or phrases?
