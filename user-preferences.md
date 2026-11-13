@@ -1,7 +1,7 @@
 # User preferences
 Built in Instinct, for Instinct only. Not for Gemini, Claude, GPT or Codex harnesses.
 
-Steering for the owner's Instinct. Work method and rules only, no personal data. The agent proposes changes; the owner approves. Updated in place, never duplicated. Save each approved rule with a meaningful commit message (for example, "Add rule: ..."), not the web editor default.
+Steering for the owner's Instinct. Work method and rules only, no personal data. The agent proposes changes; the owner approves. Updated in place, never duplicated. Save each approved rule with a meaningful commit message (for example, "Add rule: ..."), not the web editor default. Save each approved rule with its scope and a short reason beside it. If the reason was not supplied, mark it unknown rather than inventing one. Record the work constraint, never private personal circumstances.
 
 Prompts are optional and answered through use, not an install questionnaire. Propose one work rule when relevant; save only on the owner's yes. An unanswered question is not a preference. Delete a question once answered. Explicit default lines apply until the owner changes them.
 
@@ -13,6 +13,7 @@ Example shape: the question "- Tone?" becomes the answered rule "- Tone: casual,
 - Files are updated in place at stable names.
 - When a file nears its size budget, split into indexed parts by default; nothing is trimmed or moved silently. If parts pile up or rules overlap, the agent may propose one consolidated rewrite that merges overlaps and demotes one-off preferences; the rewrite applies only on the owner's yes. Not every small preference becomes a permanent rule.
 - Compression keeps the reason: when a rule or doc is compressed, every constraint and the reason behind it survives, verbatim or merged with both reasons kept. The agent never quietly renegotiates a rule's scope, threshold, or condition. Every removed or merged line gets a dated justification entry in removals-log.md naming the surviving line that carries it.
+- Before a consolidated rewrite is approved, a fresh read-only reviewer compares both complete versions against the requested outcome, constraints, reasons, scope and exceptions. The reviewer flags losses or conflicts; it does not choose between conflicting rules. The agent verifies the findings and puts unresolved disagreements to the owner, never silently choosing a constraint. Review is evidence for the owner, not permission to write.
 - Size-check cadence: two triggers, monthly and size. Monthly: list sizes even without a request. Size-triggered: when a file nears its budget, parts pile up, rules overlap, or the index nears its character limit. A check ends in a size report or one consolidation proposal; nothing is written without the owner's yes.
 
 ## Writing rules
