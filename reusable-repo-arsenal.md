@@ -15,14 +15,6 @@ The central, project-independent library of reusable repositories and design ref
 
 ## Entries
 
-This register grows from the owner's actual usage, one entry at a time, added only on the owner's yes.
+None yet. This register starts empty and grows from the owner's actual usage, one entry at a time, added only on the owner's yes.
 
 Format per entry: URL, use, license (checked against the actual LICENSE file), maintenance evidence (stars, last push, recent substantive commit, with the date checked), and why it was added.
-
-### chrome-devtools-mcp (ChromeDevTools/chrome-devtools-mcp)
-
-- URL: https://github.com/ChromeDevTools/chrome-devtools-mcp (npm package chrome-devtools-mcp; run with npx chrome-devtools-mcp@latest)
-- Use: give the agent real DevTools access when verifying a web page it owns: console messages, network requests with statuses, performance traces with Core Web Vitals and ranked insights, DOM snapshots, screenshots, viewport/CPU/network emulation. Strongest for "why is this page slow or erroring" checks where screenshots and static HTML run out. Point it at your own pages only; it is a live bridge into a browser. Needs Node >=20.19 and a Chrome binary. Usage statistics default on: --no-usage-statistics opts out, and performance traces send page URLs to the CrUX API unless --no-performance-crux.
-- License: Apache-2.0 (Google LLC). Checked 17 Nov 2026: 57,680 stars, last push 16 Nov 2026, npm release 1.13.0 with about 2.56M weekly downloads.
-- Why it was added: passed a two-case functional test on 17 Nov 2026 (a console and network health check plus a throttled mobile performance trace on a production static site), after a manual security scan of the source and the shipped npm package (no install scripts, no exfiltration paths, markdown clean of injected instructions, no secrets beyond one deliberately public CrUX API key).
-
